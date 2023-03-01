@@ -42,7 +42,7 @@ To start using the `use-is-on-screen` in your project, first install in your pro
 <summary><strong>Single Element Ref</strong></summary>
 
 ```jsx
-import useIsOnscreen from './hooks/use-is-on-screen';
+import useIsOnscreen from 'use-is-on-screen';
 
 function App() {
   const [isOnScreen, elementRef] = useIsOnscreen();
@@ -64,7 +64,7 @@ function App() {
 <summary><strong>Multiple Element Refs</strong></summary>
 
 ```jsx
-import useIsOnscreen from './hooks/use-is-on-screen';
+import useIsOnscreen from 'use-is-on-screen';
 
 function App() {
   const [isFirstOnScreen, firstElementRef] = useIsOnscreen();
