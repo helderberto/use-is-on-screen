@@ -1,6 +1,6 @@
 {
   "name": "use-is-on-screen",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React hook to check if an element is on screen",
   "main": "index.js",
   "scripts": {

@@ -39,21 +39,43 @@ To start using the `use-is-on-screen` in your project, first install in your pro
 `yarn add use-is-on-screen` or `npm install use-is-on-screen`
 
 <details open>
-<summary><strong>Avoid set state when unmounted component:</strong></summary>
+<summary><strong>Single Element Ref</strong></summary>
 
 ```jsx
 import useIsOnscreen from './hooks/use-is-on-screen';
 
 function App() {
-  const [isFirstOnscreen, firstElementRef] = useIsOnscreen();
-  const [isSecondOnscreen, secondElementRef] = useIsOnscreen();
+  const [isOnScreen, elementRef] = useIsOnscreen();
+
+  return (
+    <>
+      <header>Box visible: {isOnScreen ? 'YES' : 'NO'}</header>
+      <div className="wrapper">
+        <div ref={elementRef} className="box" />
+      </div>
+    </>
+  );
+}
+```
+
+</details>
+
+<details>
+<summary><strong>Multiple Element Refs</strong></summary>
+
+```jsx
+import useIsOnscreen from './hooks/use-is-on-screen';
+
+function App() {
+  const [isFirstOnScreen, firstElementRef] = useIsOnscreen();
+  const [isSecondOnScreen, secondElementRef] = useIsOnscreen();
 
   return (
     <>
       <header>
-        First box visible: {isFirstOnscreen ? 'YES' : 'NO'}
+        First box visible: {isFirstOnScreen ? 'YES' : 'NO'}
         <br />
-        Second box visible: {isSecondOnscreen ? 'YES' : 'NO'}
+        Second box visible: {isSecondOnScreen ? 'YES' : 'NO'}
       </header>
       <div className="wrapper">
         <div ref={firstElementRef} className="first box" />
