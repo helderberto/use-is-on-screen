@@ -1,0 +1,37 @@
+{
+  "name": "use-is-on-screen",
+  "version": "0.1.0",
+  "description": "React hook to check if an element is on screen",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint",
+    "lint:fix": "npm run lint --fix",
+    "format": "prettier --write 'src/**/*.{js,ts,tsx}'",
+    "test": "jest",
+    "test:watch": "npm run test -- --watch"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "on-screen",
+    "is-on-screen"
+  ],
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@testing-library/react-hooks": "^8.0.1",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "jest": "^29.4.3",
+    "jest-environment-jsdom": "^29.4.3",
+    "prettier": "^2.8.4"
+  },
+  "author": "Helder B. Berto <helder.burato@gmail.com> (https://helderberto.com/)",
+  "license": "MIT"
+}
